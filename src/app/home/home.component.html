@@ -1,0 +1,15 @@
+<form id="outer" style="width:100%">
+    <div>
+      X:<input type="text" name="item" [(ngModel)]="sizeX" [ngClass]="'size-field'">
+      Y:<input type="text" name="item" [(ngModel)]="sizeY" [ngClass]="'size-field'">
+      <button type="submit" class="btn btn-primary" [ngClass]="size-btn" (click)="setSize(sizeX, sizeY)">Set size</button>
+    </div>
+    <div id="inner">
+      <tr *ngFor="let row of previous; let j = index;">
+        <td *ngFor="let cell of row; let i = index;" [ngClass]="['cell', cell === true ? 'alive' : 'dead']" (click)="changeState(i, j)"></td>
+      </tr>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary" [ngClass]="size-btn" (click)="calculate()">Run</button>
+    </div>
+</form>

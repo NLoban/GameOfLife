@@ -1,0 +1,30 @@
+.cell {
+	height: 15px;
+	width: 15px;
+	border: #999 1px dotted;
+}
+
+.alive {
+	background-color: lightblue;
+}
+
+.dead {
+	background-color: #FFF;
+}
+
+.size-field {
+    width: 30px;
+}
+
+.size-btn {
+    width: 30px;
+}
+
+#outer {
+    width: 100%;
+    text-align: center;
+}
+
+#inner {
+    display: inline-block;
+}
