@@ -2,7 +2,7 @@
     <div>
       X:<input type="text" name="item" [(ngModel)]="sizeX" [ngClass]="'size-field'">
       Y:<input type="text" name="item" [(ngModel)]="sizeY" [ngClass]="'size-field'">
-      <button type="submit" class="btn btn-primary" [ngClass]="size-btn" (click)="setSize(sizeX, sizeY)">Set size</button>
+      <button type="submit" class="btn btn-primary" (click)="setSize(sizeX, sizeY)">Set size</button>
     </div>
     <div id="inner">
       <tr *ngFor="let row of previous; let j = index;">
@@ -10,6 +10,6 @@
       </tr>
     </div>
     <div>
-        <button type="submit" class="btn btn-primary" [ngClass]="size-btn" (click)="calculate()">Run</button>
+        <button type="submit" (click)="calculate()">Run</button>
     </div>
 </form>
